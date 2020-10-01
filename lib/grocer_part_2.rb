@@ -4,7 +4,7 @@ def apply_coupons(cart, coupons)
   i = 0 
   
   coupons.each do |coupon|
-    if coupon[i] == cart[i]
+    item_with_coupon = find_
 end
 
 def apply_clearance(cart)
