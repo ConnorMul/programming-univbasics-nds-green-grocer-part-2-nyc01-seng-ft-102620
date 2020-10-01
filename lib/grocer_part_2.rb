@@ -6,6 +6,13 @@ def apply_coupons(cart, coupons)
   cart.each do |items|
    coupon_item = find_item_by_name_in_collection(items[:item], new_cart)
    if coupon_item
+     new_cart_index = 0
+      new_cart.each do |new_cart_item|
+        if new_cart_item[:item] == coupon_item[:item]
+          new_cart_item[:count] = coupon_item[:item]
+        end
+        new_cart_index += 1
+      end
 end
 
 def apply_clearance(cart)
