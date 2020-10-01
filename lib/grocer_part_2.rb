@@ -5,7 +5,10 @@ def apply_coupons(cart, coupons)
   
   coupon_cart = []
   while i < cart.length do 
+    if cart[i]
     
+    i += 1 
+  end 
 end
 
 def apply_clearance(cart)
