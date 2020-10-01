@@ -21,14 +21,8 @@ def apply_coupons(cart, coupons)
 end
 
 def apply_clearance(cart)
-  new_array = []
-  cart.each do |item|
-    if item[:clearance] == true
-     item[:price] / 0.20
-     new_array << item
-   end 
- end 
- new_array
+  cart.map do |item|
+    
 end
 
 def checkout(cart, coupons)
