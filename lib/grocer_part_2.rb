@@ -1,9 +1,10 @@
 require_relative './part_1_solution.rb'
 
 def apply_coupons(cart, coupons)
-  i 
+  i i = 0 
   
-  find_item_by_name_in_collection
+  cart.each do |items|
+  find_item_by_name_in_collection()
 end
 
 def apply_clearance(cart)
