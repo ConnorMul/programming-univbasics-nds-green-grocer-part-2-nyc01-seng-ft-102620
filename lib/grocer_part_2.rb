@@ -8,7 +8,7 @@ def apply_coupons(cart, coupons)
     item_is_in_cart = !!item_with_coupon
     enough_items_for_coupon = item_is_in_cart && item_with_coupon[:count] >= coupon[:num]
     if item_is_in_cart && enough_items_for_coupon
-      cart << { "#{item_with_coupon[:item]} W/COUPON", price: coupon[:cost] / coupon[:num], 
+      cart << { "#{item_with_coupon[:item]} W/COUPON", price: coupon[:cost] / coupon[:num], clearance
 end
 
 def apply_clearance(cart)
