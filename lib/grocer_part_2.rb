@@ -40,7 +40,7 @@ def checkout(cart, coupons)
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
   
-  colsolidate_cart(cart)
+  consolidate_cart(cart)
   apply_coupons(cart, coupons)
   apply_clearance(cart)
   total = 0
