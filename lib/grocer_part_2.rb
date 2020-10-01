@@ -39,4 +39,16 @@ def checkout(cart, coupons)
   #
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
+  
+  colsolidate_cart(cart)
+  apply_coupons(cart, coupons)
+  apply_clearance(cart)
+  total = 0
+  cart.each do |item|
+   total + (item[:price] * item[:count])
+  end 
+  if total > 100 
+    total *= 0.9
+  end 
+  total
 end
