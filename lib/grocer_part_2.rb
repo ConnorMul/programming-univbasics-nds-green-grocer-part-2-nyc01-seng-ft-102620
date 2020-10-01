@@ -5,10 +5,14 @@ def apply_coupons(cart, coupons)
   
   coupon_cart = []
   while i < cart.length do 
-    if cart[i]
-    
+    if cart[i] == coupons[i]
+      coupon_cart << coupons[i]
+    else 
+      coupon_cart << cart[i]
+    end
     i += 1 
   end 
+  coupon_cart
 end
 
 def apply_clearance(cart)
