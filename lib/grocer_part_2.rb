@@ -24,8 +24,8 @@ def apply_clearance(cart)
   new_array = []
   cart.each do |item|
     if item[:clearance] == true
-     clearanced_item = item[:price] / 0.20
-     new_array << clearanced_item
+     item[:price] / 0.20
+     new_array << item
    end 
  end 
  new_array
