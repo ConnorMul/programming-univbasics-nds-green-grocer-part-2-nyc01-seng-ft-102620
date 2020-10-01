@@ -6,6 +6,7 @@ def apply_coupons(cart, coupons)
   coupon_cart = []
   while i < cart.length do 
     if cart[i] == coupons[i]
+      coupons[i][:item] = "#{item}W/COUPON"
       coupon_cart << coupons[i]
     else 
       coupon_cart << cart[i]
