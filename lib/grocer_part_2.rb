@@ -43,10 +43,12 @@ def checkout(cart, coupons)
   consolidate_cart(cart)
   apply_coupons(cart, coupons)
   apply_clearance(cart)
-  total = 0
+  total = nil
   cart.each do |item|
-   total + (item[:price] * item[:count])
-   total
+   if total == nil
+    total = (item[:price] * item[:count])
+   else 
+     total + (item[:price] * item[:count])
   end 
   if total > 100 
     total *= 0.9
