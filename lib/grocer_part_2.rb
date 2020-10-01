@@ -4,7 +4,7 @@ def apply_coupons(cart, coupons)
   i = 0 
   
   coupons.each do |coupon|
-    item_with_coupon = find_
+    item_with_coupon = find_item_by_name_in_collection(coupon[:item], cart)
 end
 
 def apply_clearance(cart)
