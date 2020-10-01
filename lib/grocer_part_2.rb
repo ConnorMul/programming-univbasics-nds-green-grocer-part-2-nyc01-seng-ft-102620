@@ -21,9 +21,14 @@ def apply_coupons(cart, coupons)
 end
 
 def apply_clearance(cart)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This method **should** update cart
+  new_array = []
+  cart.each do |item|
+    if item[:clearance] == true
+     clearanced_item = item[:clearance] / 0.20
+     new_array << clearanced_item
+   end 
+ end 
+ new_array
 end
 
 def checkout(cart, coupons)
