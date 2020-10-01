@@ -40,15 +40,12 @@ def checkout(cart, coupons)
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
   
-  consolidate_cart(cart)
-  apply_coupons(cart, coupons)
-  apply_clearance(cart)
-  total = nil
+  final_cart = apply_clearance(apply_coupons(consolidate_cart(cart), coupons))
+  total = 0
   cart.each do |item|
    if total == nil
-    total = (item[:price] * item[:count])
-   else 
-     total + (item[:price] * item[:count])
+    total += (item[:price] * item[:count])
+   
      end 
    end 
   if total > 100 
